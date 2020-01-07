@@ -16,17 +16,15 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ### How long will that pothole take to fill?
+            
+            
+            If you live in Kansas City, or know anyone who does, you know that potholes were a major issue in Winter 2019. 
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
-
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
-
+            This app allows you to input some basic information and recieve a prediction for how long a given pothole would take to fill in KCMO.
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Try It Out', color='primary'), href='/predictions')
     ],
     md=4,
 )
