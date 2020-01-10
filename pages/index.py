@@ -15,13 +15,14 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ### How long will that pothole take to fill?
+            #### How long will that pothole take to fill?
             
             
             If you live in Kansas City, or know anyone who does, you know that potholes were a major issue in Winter 2019. People even [threw birthday parties](https://www.cnn.com/2019/07/01/us/man-threw-birthday-party-for-3-month-old-pothole-trnd/index.html) for their potholes.
 
-            This app allows you to input some basic information and recieve a prediction for how long a given pothole might take to fill in Kansas City, Missouri.
-            """
+            This app allows you to input some basic information and receive a prediction for how long a given pothole might take to fill in Kansas City, Missouri.
+            """,
+            style={'fontFamily':'Verdana', 'fontWeight': 'normal', 'fontSize': 'smaller'}
         ),
         dcc.Link(dbc.Button('Fill That Pothole', color='primary'), href='/predictions'),
 
