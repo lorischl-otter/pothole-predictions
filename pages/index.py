@@ -4,7 +4,6 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-import plotly.express as px
 
 # Imports from this application
 from app import app
@@ -19,24 +18,24 @@ column1 = dbc.Col(
             ### How long will that pothole take to fill?
             
             
-            If you live in Kansas City, or know anyone who does, you know that potholes were a major issue in Winter 2019. 
+            If you live in Kansas City, or know anyone who does, you know that potholes were a major issue in Winter 2019. People even [threw birthday parties](https://www.cnn.com/2019/07/01/us/man-threw-birthday-party-for-3-month-old-pothole-trnd/index.html) for their potholes.
 
-            This app allows you to input some basic information and recieve a prediction for how long a given pothole would take to fill in KCMO.
+            This app allows you to input some basic information and recieve a prediction for how long a given pothole might take to fill in Kansas City, Missouri.
             """
         ),
-        dcc.Link(dbc.Button('Try It Out', color='primary'), href='/predictions')
-    ],
-    md=4,
-)
+        dcc.Link(dbc.Button('Fill That Pothole', color='primary'), href='/predictions'),
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
+    ],
+    md=6,
+)
 
 column2 = dbc.Col(
     [
-        dcc.Graph(figure=fig),
+        html.Img(src='assets/pothole_cake.jpeg', className='img-fluid'),
+
     ]
 )
+
+
 
 layout = dbc.Row([column1, column2])
