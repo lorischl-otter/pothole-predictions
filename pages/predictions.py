@@ -115,7 +115,7 @@ column1 = dbc.Col(
             value=-94.55,
             className='mb-5'
         ),
-        dcc.Markdown('##### What is your favorite alliterative pothole euphamism?'),
+        dcc.Markdown('##### What is your favorite alliterative pothole euphemism?'),
         dcc.Dropdown(
             id='nickname',
             options=[
